@@ -16,6 +16,7 @@ emitter.setMaxListeners(100);
 import Routers from "./routers/routers.js";
 //app middleware
 app.use(bodyParser.json());
+
 app.use(bodyParser.urlencoded({ extended: true }));
 config();
 //routes

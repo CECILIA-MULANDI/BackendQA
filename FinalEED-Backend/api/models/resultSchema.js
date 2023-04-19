@@ -5,7 +5,9 @@ const ResultSchema = new Schema({
     username: { type: String },
     result: [{
         question: { type: Schema.Types.ObjectId, ref: "Question" },
-        answer: { type: String },
+        answer: {
+            type: String,
+        },
         points: { type: Number },
     }, ],
 

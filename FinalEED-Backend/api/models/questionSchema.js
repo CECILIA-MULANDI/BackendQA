@@ -13,11 +13,10 @@ const QuestionSchema = new Schema({
     },
     choices: [{
         type: String,
-
+        enum: ["A", "B", "C", "D"],
         required: function() {
             return this.type === "choice";
         },
-        enum: ["A", "B", "C", "D"],
     }, ],
     answer: {
         type: String,
