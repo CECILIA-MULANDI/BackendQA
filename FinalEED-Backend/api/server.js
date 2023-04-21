@@ -25,7 +25,9 @@ connect()
   .then(() => {
     try {
       // listen to a port
-      app.listen(process.env.PORT, () => console.log("listening at port 5000"));
+      app.listen(process.env.PORT, () =>
+        console.log(`listening at port ${process.env.PORT}`)
+      );
     } catch (error) {
       console.log(error);
     }
