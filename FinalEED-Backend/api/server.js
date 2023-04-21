@@ -22,14 +22,14 @@ config();
 //routes
 app.use("/api/", Routers);
 connect()
-    .then(() => {
-        try {
-            // listen to a port
-            app.listen(5000, () => console.log("listening at port 5000"));
-        } catch (error) {
-            console.log(error);
-        }
-    })
-    .catch((error) => {
-        console.log(error);
-    });
+  .then(() => {
+    try {
+      // listen to a port
+      app.listen(process.env.PORT, () => console.log("listening at port 5000"));
+    } catch (error) {
+      console.log(error);
+    }
+  })
+  .catch((error) => {
+    console.log(error);
+  });
