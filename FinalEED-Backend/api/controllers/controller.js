@@ -80,7 +80,12 @@ export async function updateQuestion(req, res) {
 
 //get results
 export async function getResult(req, res) {
-  res.json("get some results");
+  try {
+    const results = await Results.find();
+    res.json({ results });
+  } catch (error) {
+    res.json({ msg: error });
+  }
 }
 // post results
 export async function storeResult(req, res) {
