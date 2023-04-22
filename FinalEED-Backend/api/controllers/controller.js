@@ -87,6 +87,15 @@ export async function getResult(req, res) {
     res.json({ msg: error });
   }
 }
+// get result
+export async function getResult(req, res) {
+  try {
+    const results = await Results.findById(req.params.id);
+    res.json({ results });
+  } catch (error) {
+    res.json({ msg: error });
+  }
+}
 // post results
 export async function storeResult(req, res) {
   try {
